@@ -1121,8 +1121,10 @@ class Word2Vec(utils.SaveLoad):
         """
         Accepts a single word (or) a list of words as input. 
 
-        Returns a word's representations in vector space, as a 1 X VEC_LENGTH 1D numpy array, IF a word is passed as an argument (or)
-        Returns N word's representations in vector space, as a N X VEC_LENGTH 2D numpy array, IF a list of words are passed as an argument.
+        - Returns a word's representations in vector space, 
+              as a 1 X VEC_LENGTH 1D numpy array, IF a word is passed as an argument (or)
+        - Returns N words' representations in vector space, 
+              as a N X VEC_LENGTH 2D numpy array, IF a list of words are passed as an argument.
 
         This is a common usecase of the __getitem__() method to support a list of words too.
 
@@ -1131,7 +1133,7 @@ class Word2Vec(utils.SaveLoad):
         >>> trained_model['office']
         array([ -1.40128313e-02, ...])
 
-        >>> trained_model[['office','products']]
+        >>> trained_model[['office', 'products']]
         array([ -1.40128313e-02, ...]
               [ -1.70425311e-03, ...]
                ...)
